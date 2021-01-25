@@ -10,6 +10,7 @@ public class MyComponentToBeCustomized : MonoBehaviour
 	{
 		[InspectorName("clavier")] // change le nom d'une option d'enum dans l'inspector
 		KEYBOARD,
+		[InspectorName("manette")]
 		GAMEPAD
 	};
 

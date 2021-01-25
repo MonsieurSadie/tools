@@ -61,6 +61,13 @@ public class MyCustomInspector : Editor // /!\ ne dérive pas de MonoBehaviour m
 				"playerHp", "playerArmor", "controllerType", "speed", "deadZone", "sensitivity"
 			});
 
+			// DrawDefaultInspector();
+
+			if(GUILayout.Button("Log"))
+			{
+				Debug.Log("log");
+			}
+
 
       // /!\ : il faut ensuite appliquer les modifications qui auraient pu être faites durant cette frame
       // (ce que l'utilisateur modifie sont les données en mémoire, il faut les sérialiser pour les garder)

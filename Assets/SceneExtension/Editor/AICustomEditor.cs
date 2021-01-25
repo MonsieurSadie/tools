@@ -8,8 +8,10 @@ public class AICustomEditor : Editor
 {
   void OnSceneGUI()
   {
-  	AIScript ai = (AIScript)target;
-
+  	// target étant un type générique, il faut caster (convertir) cette variable e, AIScript, qui est le type qui nous intéresse
+  	// AIScript ai = (AIScript)target;
+  	AIScript ai = target as AIScript;
+  	
     if (ai == null)
     {
         return;
@@ -35,6 +37,6 @@ public class AICustomEditor : Editor
   	// si on veut que l'arc soit symétrique par rapport au forward, il faut faire démarrer à gauche du forward, de la moitié de l'arc
   	Quaternion halfAngleRot = Quaternion.AngleAxis(-ai.visionAngle*0.5f, ai.transform.up);
   	Vector3 arcStartDir = halfAngleRot * ai.transform.forward;
-		Handles.DrawSolidArc(ai.transform.position, ai.transform.up, arcStartDir, ai.visionAngle, ai.visionDistance);  	
+		Handles.DrawSolidArc(ai.transform.position, ai.transform.up, arcStartDir, ai.visionAngle, ai.visionDistance);
   }
 }
