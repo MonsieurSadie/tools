@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a7cf374103d5843a2db9c3c92ea253, type: 3}
+  m_Name: 9
+  m_EditorClassIdentifier: 
+  ID: 0
+  Name: "Ep\xE9e l\xE9gendaire"
+  Type: 0
+  Rarity: 0
+  Price: 100
+  ATK: 50
+  DEF: 10
+  Description_fr: 
+  Description_en: 
+  Description_es: 
