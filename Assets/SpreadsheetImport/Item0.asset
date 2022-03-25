@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0a7cf374103d5843a2db9c3c92ea253, type: 3}
-  m_Name: 0
+  m_Name: Item0
   m_EditorClassIdentifier: 
   ID: 0
-  Name: "Ep\xE9e l\xE9gendaire"
+  Name: 
   Type: 0
-  Rarity: 2
-  Price: 100
-  ATK: 50
-  DEF: 10
+  Rarity: 0
+  Price: 0
+  ATK: 0
+  DEF: 0
   Description_fr: 
   Description_en: 
   Description_es: 

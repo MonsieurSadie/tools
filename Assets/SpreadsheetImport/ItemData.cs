@@ -17,9 +17,10 @@ namespace Shop
     {
         Common,
         Rare,
-        Lengendary
+        Legendary
     }
 
+    [CreateAssetMenu(fileName = "Item", menuName = "CustomData/Item", order = 1)]
     public class ItemData : ScriptableObject
     {
         public int ID;

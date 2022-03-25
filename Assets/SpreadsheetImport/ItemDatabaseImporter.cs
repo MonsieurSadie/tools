@@ -22,14 +22,18 @@ namespace Shop
         static void ImportData()
         {
             string outputFolder = "Assets/SpreadsheetImport/ItemsImportedData/";
+            // Application.dataPath : chemin du type : "C:....../Assets"
             string filepath = Application.dataPath + "/SpreadsheetImport/GameDataBase.csv";
-            
+            // Les manipulation de fichiers : System.IO.File.
+            // Les deux fonctions de lecture les plus communes :
+            // ReadAllLines, ReadAllText
             string[] filecontent = System.IO.File.ReadAllLines(filepath);
 
             foreach (var line in filecontent)
             {
                 // skip first line as it is juste the columns names (first line starts with #)
                 if (line[0] == '#') continue;
+                if (line.StartsWith("#,Nom,Type")) continue;
 
                 // before reading current line data, create the data structure that will hold the data
                 ItemData newData    = ScriptableObject.CreateInstance<ItemData>();
@@ -49,9 +53,10 @@ namespace Shop
 
                 // create asset file
                 string assetFileName = line[0] + ".asset";
+                //Format du Chemin de sortie : "Assets/MonDossier/MonFichier.assset"
                 AssetDatabase.CreateAsset(newData, outputFolder + assetFileName);
             }
-            // save asset files
+            // save asset files on disk
             AssetDatabase.SaveAssets();
         }
     }

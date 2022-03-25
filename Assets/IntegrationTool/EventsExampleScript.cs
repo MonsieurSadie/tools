@@ -9,7 +9,6 @@ public class EventsExampleScript : MonoBehaviour
     public UnityEvent OnPlayerDeath     = null;
     [Tooltip("event that will fire when player gains score")]
     public UnityEvent OnPlayerScores    = null;
-
     
     void Update()
     {
